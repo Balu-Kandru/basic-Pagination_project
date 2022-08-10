@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from 'react';
+import Pagenation from './pages';
 //const axios = require("axios");${props.category}
 import "./style.css"
 import Popup from './popup';
@@ -23,6 +24,10 @@ const Products=(props)=>{
     const indexoflastpost=currentpage*posts
     const indexoffirstpost=indexoflastpost-posts
     const currentpost=product.slice(indexoffirstpost,indexoflastpost)
+    const pagenate=(num)=>{
+        setCurrentpage(num)
+    }
+
     return (
         <>
             <div className='main-page'>
@@ -36,6 +41,7 @@ const Products=(props)=>{
                 )
             })
             }
+            <Pagenation posts={posts} totalposts={product.length} pagenate={pagenate} />
             </div>
         </>
     )   
