@@ -1,0 +1,22 @@
+.main-page{
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+}
+img{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.pop-up{
+    display: none;
+    
+}
+.my-div:hover .pop-up{
+    display: flex;
+    
+}
+.pop-header{
+    display: flex;
+}
