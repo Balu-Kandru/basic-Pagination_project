@@ -1,15 +1,15 @@
-const Pagenation =({posts , totalposts,pagenate })=>{
-    const pageNumber=[]
-    for(let i=1;i<=Math.ceil(totalposts / posts);i++){
+const Pagination = ({ posts, totalposts, pagenate }) => {
+    const pageNumber = []
+    for (let i = 1; i <= Math.ceil(totalposts / posts); i++) {
         pageNumber.push(i)
     }
     return (
         <nav>
             <ul className="page">
                 {
-                    pageNumber.map(num=>(
+                    pageNumber.map(num => (
                         <li key={num}>
-                            <a onClick={()=>{pagenate(num)}} href="!#" >{num}</a>
+                            <a onClick={() => { pagenate(num) }} href="!#" >{num}</a>
                         </li>
                     ))
                 }
@@ -17,4 +17,4 @@ const Pagenation =({posts , totalposts,pagenate })=>{
         </nav>
     )
 }
-export default Pagenation
+export default Pagination

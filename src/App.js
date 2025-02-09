@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">Available Products</header>
-      <select onChange={(e) => setCategory(e.target.value)} >
-        <option value={""} >select</option>
+      <select  onChange={(e) => setCategory(e.target.value)} >
+        <option value={"men's clothing"} >select</option>
         <option value={"electronics"} >Electronics</option>
         <option value={"jewelery"} >jewelery</option>
         <option value={"men's clothing"} >men's clothing</option>
